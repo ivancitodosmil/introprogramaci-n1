@@ -4,7 +4,7 @@ public class Area_De_Circunferencia {
 
         public static void main(String[] args) {
 
-            System.out.println("Programa Para Obtener el Área de una Circunferencia");
+            System.out.println("Programa Para Obtener El Área De Una Circunferencia");
 
             System.out.println("Ingrese el valor del radio");
 
