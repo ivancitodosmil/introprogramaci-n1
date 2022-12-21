@@ -53,8 +53,8 @@ public class CuentaBanco {
                                     break;
                             }
                         }
-                    }else{
-                        System.out.println("No es una Cuenta de este Banco");
+                    }else if (indice==5){
+                        //Realizamos esto para que nos coloquen un número de cuenta válido
                     }
                 }
             }
