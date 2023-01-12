@@ -17,10 +17,25 @@ public class AreaFigura {
         switch (opcion){
             case 1:
                 System.out.println("Ingrese el valor del radio: ");
-                double radio= teclado.nextInt();
+                double radio= teclado.nextDouble();
                 double area=obtener_area_circunferencia(radio);
                 System.out.println("El área es: "+area);
                 break;
+            case 2:
+                System.out.println("Ingrese el valor del lado: ");
+                double lado = teclado.nextDouble();
+                double area_c=Obtener_area_cuadrado(lado);
+                System.out.println("El área de un cuadrado es: "+area_c);
+                break;
+            case 3:
+                System.out.println("Ingrese el valor del radio: ");
+                double radio_cili =teclado.nextDouble();
+                System.out.println("Ingrese el valor de la altura: ");
+                double altura_cili=teclado.nextDouble();
+                double area_cilindro=Obtener_area_cilindro(radio_cili,altura_cili);
+                System.out.println("El área del cilindro es: "+area_cilindro);
+            default:
+                System.out.println("Opción no válida");
         }
     }
 
@@ -29,7 +44,7 @@ public class AreaFigura {
      * @param radio
      * @return
      */
-    public double obtener_area_circunferencia (double radio){
+    public static double obtener_area_circunferencia (double radio){
         double area= Math.PI * Math.pow(radio,2);
         return area;
 
@@ -40,7 +55,7 @@ public class AreaFigura {
      * @param lado
      * @return
      */
-    public double Obtener_area_cuadrado(double lado){
+    public static double Obtener_area_cuadrado(double lado){
         double area =lado*lado;
         return area;
     }
@@ -49,7 +64,9 @@ public class AreaFigura {
      * Método para obtener el área de un cilindro
      * @return
      */
-    public void Obtener_area_cilindro(){
+    public static double Obtener_area_cilindro(double radio, double altura){
+        double area=2*Math.PI*radio*(radio+altura);
+        return area;
     }
 }
 
